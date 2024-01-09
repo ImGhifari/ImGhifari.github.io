@@ -1,0 +1,210 @@
+---
+title: "Pengaruh Tingkat Pengangguran Terbuka Terhadap Jumlah Penduduk Miskin di Indonesia Tahun 2022"
+subtitle: "Metode Penelitian Politeknik APP Jakarta"
+author: "Muhammad Alif Ghifari"
+date: 2024-01-08
+number-sections: true
+format:
+  html: default
+  docx: default
+---
+
+```         
+```
+
+![](poltekapp.jpg)
+
+## Pendahuluan
+
+### Latar belakang
+
+Pengangguran terbuka memiliki dampak yang signifikan terhadap tingkat kemiskinan di suatu negara. Tingkat pengangguran yang tinggi dapat menjadi faktor kontributor utama terhadap peningkatan jumlah penduduk miskin. Dalam penelitian ini akan membahas mengenai hubungan antara tingkat pengangguran terbuka dan jumlah penduduk miskin dapat memengaruhi perekonomian suatu negara.
+
+Selain itu, pengangguran terbuka juga dapat menyebabkan tekanan pada sistem kesejahteraan sosial dan layanan publik. Pemerintah akan dihadapkan pada tuntutan untuk memberikan bantuan kepada pengangguran, yang pada akhirnya, dapat mempengaruhi kebijakan dan anggaran negara. Akibatnya, ketidakstabilan ekonomi yang disebabkan oleh tingkat pengangguran yang tinggi dapat berkontribusi terhadap meningkatnya jumlah penduduk miskin.
+
+Selain dampak ekonomi, pengangguran terbuka juga dapat memiliki konsekuensi sosial, seperti peningkatan tingkat stres, depresi, dan masalah kesejahteraan mental lainnya di kalangan individu yang mengalami pengangguran. Ini dapat menciptakan spiral negatif di mana ketidakstabilan ekonomi dan kesejahteraan sosial saling memperkuat satu sama lain.
+
+### Ruang lingkup
+
+Ruang lingkup akan meliputi variable yang digunakan pada analisis kali ini, yaitu Tingkat Pengangguran Terbuka di setiap provinsi terhadap Jumlah Penduduk Miskin di setiap provinsi dan tahun terkait. Batasan masalah berperan dalam membantu mengidentifikasi masalah yang akan dibahas kemudian membatasi jangkauan proses yang dibahas.
+
+### Rumusan masalah
+
+1\. Adakah pengaruh dari Tingkat Pengangguran Terbuka terhadap Jumlah Kemiskinan Penduduk?
+
+2\. Apakah Tingkat Pengangguran Terbuka tersebut berpengaruh besar terhadap Jumlah Kemiskinan Penduduk?
+
+### Tujuan dan manfaat penelitian
+
+Tujuan penelitian ini untuk mengetahui Pengaruh Tingkat Pengangguran Terbuka terhadap Jumlah Penduduk Miskin Indonesia
+
+Manfaat penelitian ini agar masyarakat menyadari bahwa ada atau tidak pengaruh terkait Tingkat Pengangguran Terbuka terhadap Jumlah Penduduk Miskin.
+
+### Package
+
+Ini tidak wajib ada di tulisan anda tapi anda dapat menunjukkan Packages yang digunakan antara lain sebagai berikut:
+
+```{r}
+#| warning: false
+#| echo: true
+library("tidyverse")
+library("readxl")
+library("dplyr")
+```
+
+## Studi pustaka
+
+Menurut Sukirno (2011), pengangguran adalah keadaan dimana segolongan tenaga kerja menghadapi situasi tanpa pekerjaan yang kemudian sedang berusaha mencari pekerjaan tetapi tidak memperolehnya.
+
+Kemiskinan merupakan kondisi dimana seseorang atau sekelompok orang, tidak mampu untuk memenuhi hak-hak dasar dalam hidupnya agar bisa bertahan dan mampu hidup sejahtera.
+
+## Metode penelitian
+
+### Data
+
+|                     |         |
+|---------------------|---------|
+| **Provinsi**        | **TPT** |
+| ACEH                | 6,17    |
+| SUMATERA UTARA      | 6,16    |
+| SUMATERA BARAT      | 6,28    |
+| RIAU                | 4,37    |
+| JAMBI               | 4,59    |
+| SUMATERA SELATAN    | 4,63    |
+| BENGKULU            | 3,59    |
+| LAMPUNG             | 4,52    |
+| KEP.BANGKA BELITUNG | 4,77    |
+| KEP.RIAU            | 8,23    |
+| DKI JAKARTA         | 7,18    |
+| JAWA BARAT          | 8,31    |
+| JAWA TENGAH         | 5,57    |
+| DI YOGYAKARTA       | 4,06    |
+| JAWA TIMUR          | 5,49    |
+| BANTEN              | 8,09    |
+| BALI                | 4,8     |
+| NUSA TENGGARA BARAT | 2,89    |
+| NUSA TENGGARA TIMUR | 3,54    |
+| KALIMANTAN BARAT    | 5,11    |
+| KALIMANTAN TENGAH   | 4,26    |
+| KALIMANTAN SELATAN  | 4,74    |
+| KALIMANTAN TIMUR    | 5,71    |
+| KALIMANTAN UTARA    | 4,33    |
+| SULAWESI UTARA      | 6,61    |
+| SULAWESI TENGAH     | 3       |
+| SULAWESI SELATAN    | 4,51    |
+| SULAWESI TENGGARA   | 3,36    |
+| GORONTALO           | 2,58    |
+| SULAWESI BARAT      | 2,34    |
+| MALUKU              | 6,88    |
+| MALUKU UTARA        | 3,98    |
+| PAPUA BARAT         | 5,37    |
+| PAPUA               | 2,83    |
+
+| Provinsi            | JPM     |
+|---------------------|---------|
+| ACEH                | 818,47  |
+| SUMATERA UTARA      | 1262,09 |
+| SUMATERA BARAT      | 343,82  |
+| RIAU                | 493,13  |
+| JAMBI               | 283,82  |
+| SUMATERA SELATAN    | 1054,99 |
+| BENGKULU            | 292,93  |
+| LAMPUNG             | 995,59  |
+| KEP.BANGKA BELITUNG | 69,69   |
+| KEP.RIAU            | 148,89  |
+| DKI JAKARTA         | 494,93  |
+| JAWA BARAT          | 4053,62 |
+| JAWA TENGAH         | 3858,23 |
+| D.I. YOGYAKARTA     | 463,63  |
+| JAWA TIMUR          | 4236,51 |
+| BANTEN              | 829,66  |
+| BALI                | 205,36  |
+| NUSA TENGGARA BARAT | 744,69  |
+| NUSA TENGGARA TIMUR | 1149,17 |
+| KALIMANTAN BARAT    | 356,51  |
+| KALIMANTAN TENGAH   | 144,52  |
+| KALIMANTAN SELATAN  | 201,95  |
+| KALIMANTAN TIMUR    | 242,3   |
+| KALIMANTAN UTARA    | 50,58   |
+| SULAWESI UTARA      | 187,33  |
+| SULAWESI TENGAH     | 389,71  |
+| SULAWESI SELATAN    | 782,32  |
+| SULAWESI TENGGARA   | 314,74  |
+| GORONTALO           | 187,35  |
+| SULAWESI BARAT      | 169,26  |
+| MALUKU              | 296,66  |
+| MALUKU UTARA        | 82,13   |
+| PAPUA BARAT         | 222,36  |
+| PAPUA               | 936,32  |
+
+Penelitian ini menggunakan data Jumlah Penduduk Miskin dan Tingkat Pengangguran Terbuka.
+
+```{r}
+#import dataset
+library("readxl")
+dat<-read_excel('dat.xlsx')
+head(dat)
+```
+
+```{r}
+library("ggplot2")
+library("readxl")
+library("dplyr")
+ggplot(data=dat,aes(x=JPM,y=TPT)) +
+  geom_point(color="blue",size=2) + 
+  labs(title="tabel 1. Hubungan Jumlah Penduduk Miskin dan Tingkat Pengangguran Terbuka",
+       x="Jumlah Penduduk Miskin",
+       y="Tingkat Pengangguran Terbuka",
+       caption = "sumber: Badan Pusat Statistik") +
+  theme_classic()
+```
+
+### Metode analisis
+
+Metode yang dipilih adalah regresi univariat atau Ordinary Least Square (OLS) dengan 1 variabel independen. Penelitian ini bermaksud mencari hubungan antara TIngkat Pengangguran Terbuka dan Jumlah Penduduk Miskin. Spesifikasi yang dilakukan adalah:
+
+$$
+y_{t}=\beta_0 + \beta_1 x_t+\mu_t
+$$di mana $y_t$ adalah Tingkat Pengangguran Terbuka dan $x_t$ adalah Jumlah Penduduk Miskin.
+
+## Pembahasan
+
+### Pembahasan masalah
+
+### Analisis masalah
+
+Dikarenakan penelitian menggunakan OLS, maka pembahasan disini hanya menghubungkan Jumlah Penduduk Miskin dan Tingkat Pengangguran Terbuka. Data tersebut saya satukan untuk saya regresi dan tampilannya seperti ini.
+
+```{r}
+#import dataset
+library('readxl')
+data<-('dat.xlsx')
+head(dat)
+```
+
+```         
+```
+
+Berikut hasil regresinya
+
+```{r}
+reg1<-lm(JPM~TPT,data=dat)
+summary(reg1)
+```
+
+```         
+```
+
+## Kesimpulan
+
+Dari hasil regresi dapat dilihat bahwa setiap meningkat 100 ribu orang tingkat pengangguran terbuka di setiap Provinsi, maka jumlah penduduk miskin meningkat sebesar 193.8 persen. Maka kesimpulan dari hasil regresi tersebut menunjukkan adanya pengaruh Tingkat Pengangguran Terbuka terhadap Jumlah Penduduk Miskin.
+
+## Referensi
+
+Badan Pusat Statistik. (n.d). Retrieved January 09, 2024, from, https://www.bps.go.id/id/statistics-table/2/NTQzIzI=/tingkat-pengangguran-terbuka--agustus-2023.html
+
+Badan Pusat Statistik. (n.d). Retrieved January 09, 2024, from, https://www.bps.go.id/id/statistics-table/2/MTg1IzI=/jumlah-penduduk-miskin--ribu-jiwa--menurut-provinsi-dan-daerah.html
+
+Saribulan, Nur\*, Rahman, Hardiyanto, & Rassanji, Saddam. (2023). *Perkembangan  Penelitian Penanggulangan  Kemiskinan  di Indonesia:Analisis Bibliometrik dan Analisis Konten*. *12*. <https://doi.org/10.23887/jish.v12i2.62375>
+
+T. Pramudjasi, Rangga, Juliansyah, & Lestari, Diana. (2019). Pengaruh jumlah penduduk dan pendidikan serta upah terhadap pengangguran di kabupaten paser. *Journals of Economics and Business Mulawarman (JEBM)*, *16*. <https://doi.org/10.30872/jkin.v16i1.5284>
